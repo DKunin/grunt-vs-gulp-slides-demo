@@ -30,6 +30,8 @@
     "vinyl-source-stream": "^0.1.1"
   },
   "dependencies": {
-    "nib": "^1.0.2"
+    "nib": "^1.0.2",
+    "gulp-minify-css": "^0.3.4",
+    "gulp-rev": "^0.4.0"
   }
 }
