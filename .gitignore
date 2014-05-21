@@ -1,0 +1,6 @@
+node_modules
+tmp
+GruntDemo/node_modules
+GruntDemo/.tmp
+GulpDemo/node_modules
+GulpDemo/tmp

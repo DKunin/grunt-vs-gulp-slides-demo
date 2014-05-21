@@ -1,0 +1,107 @@
+extends /layouts/_default
+
+block content
+  .logo
+  .timer
+  .reveal
+    .slides
+      section
+        h1 Grunt vs Gulp
+        h3 системы сборок и скаффолдинга - кто сильнее
+        // NOTE:План
+      section
+        h2 Кто я такой?
+        ul
+          li Дмитрий Кунин
+          li ведущий Front end разработчик AT-Consulting
+      section
+        h2 Пара вопросов
+        ul
+          li.fragment Кто пользуются системами сборок?
+          li.fragment Кто ползуются Grunt?
+          li.fragment Кто ползуются Gulp?
+          li.fragment Bruch, make,  etc...?
+      section
+        h2 Для чего используются системы автоматизации?
+        ul
+          li cкаффолдинг
+          li concat
+          li lint
+          li минификация
+          li unit tests
+          li server
+          li генератор компонентов
+          li генерация документации
+          li watch
+      section
+        h2 Grunt краткая вводная
+        ul
+          li Plugins count: 2,813 (gruntjs.com) 
+          li Configuration over code
+          li Огромное коммюнити
+      section
+        h2 Gulp краткая вводная
+        ul
+          li Plugins count: 660 (gulpjs.com) 
+          li Code over configuration
+          li Steam Based
+          li Работает с vynil объектом
+          li Очень простой API     
+      section
+        h3 Читаемость/удобство
+        pre.language-javascript
+          code.javascript.language-javascript.
+            module.exports = function(grunt) {
+              grunt.loadNpmTasks('grunt-contrib-stylus');
+              grunt.initConfig({
+                stylus: {
+                  src: ["styles.styl"],
+                  dest: "styles.css"
+                }
+              })
+              grunt.registerTask('default', ['stylus']);  
+            });
+        pre.language-javascript
+          code.javascript.language-javascript.
+            var gulp = require('gulp'),
+                stylus = require('gulp-stylus');
+
+            gulp.task('styles', function() {
+              return gulp.src('src/styles/styles.styl')
+                .pipe(stylus())
+                .pipe(gulp.dest('public/styles'));
+            });
+            gulp.task('default', ['stylus']);
+      section
+        h2 Скорость
+        div.fragment Пример
+      section
+        h2 Оптимизация
+      section
+        h2 Снова вопрос
+        div.fragment Кто пользуется Grunt.js?
+        div.fragment Готовы ли Вы/хотите ли Вы переключиться?
+      section
+        h2 Стоит ли переключаться?
+        div.fragment На мой взгдяд нет - потому что:
+        ul
+          li.fragment Неохота переписывать существующие проекты          
+          li.fragment Следующие релизы = работа с потоками          
+          li.fragment Огромное коммьюнити          
+        div.fragment На мой взгдяд да - потому что:
+        ul
+          li.fragment Потрясающая скорость доступная уже сейчас
+          li.fragment Личная привлекательность code over config          
+          li.fragment Возможность использовать любые node.js модули          
+
+      section
+        h2 Спасибо!
+        h3 Вопросы?
+        hr
+        h4 Дмитрий Кунин
+        h4 http://dkun.in/
+
+
+
+//- Кто хотел бы сменить систему?
+ 
