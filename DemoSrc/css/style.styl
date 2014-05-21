@@ -1,0 +1,63 @@
+@import 'nib'
+@import _rupture
+@import _color
+@import _functions
+@import _jeet
+@import _mixins
+@import 'font/ptsans.css'
+
+body
+  *
+    font-family: 'PTSansRegular'
+  background-color: clouds
+  aside
+    position: relative
+    ul
+      padding: 0px
+      list-style: none
+      li
+        text-align: center
+      a
+        border-radius: 5px
+        background-color: #DFDFDF
+        display: block
+        margin: 0px 0px 15px 0px
+        padding: 10px
+        text-decoration: none
+        color: black
+        text-transform: uppercase
+        font-size: 20px
+        transition: background .5s linear
+        &:hover 
+          background-color: #cFcFcF
+    col(1/4)
+    select
+      float: right
+      width: 100%
+      hide()
+    +below(700px)
+      stack()
+      ul
+        hide()
+      select
+        show()
+  article
+    col(3/4)
+    p
+      background-color: #DFDFDF
+      padding: 10px
+      border-radius: 5px
+      cf()
+    img
+      span(2/4)
+    .left
+      margin: 0 10px 10px 0
+      float: left
+    .right
+      margin: 0 0 10px 10px
+      float: right
+    +below(700px)
+      stack()
+      img
+        stack()
+        clear: both
